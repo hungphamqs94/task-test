@@ -12,8 +12,8 @@ const ipfsClient = require('ipfs-http-client');
 import axios from "axios";
 // import prisma from '../lib/prisma.ts';
 
-const projectId = '2F6iTkDPiGepvlM66PazCgcPxcM';
-const projectSecret = '9b1f24b13d3c9c9211e6f7891f4424dd';
+const projectId = '2SZGTwHHrl12rdbvwV2XwMJGvUT';
+const projectSecret = '386718dd1242a839ef1d71e93f39bba7';
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
 
 const client = ipfsClient.create({
@@ -45,7 +45,7 @@ export default function CreateItem() {
       const added = await client.add(file, {
         progress: (prog) => console.log(`received: ${prog}`),
       });
-      const fileUrl = `https://infura-ipfs.io/ipfs/${added.path}`;
+      const fileUrl = `https://ticketcheck.infura-ipfs.io/ipfs/${added.path}`;
       console.log("111111111111111111111", fileUrl);
       setValues({ ...values, fileUrl });
     } catch (error) {
@@ -63,7 +63,7 @@ export default function CreateItem() {
     });
     try {
       const added = await client.add(data);
-      const url = `https://infura-ipfs.io/ipfs/${added.path}`;
+      const url = `https://ticketcheck.infura-ipfs.io/ipfs/${added.path}`;
       console.log("222222222222222222222", url);
       /* after file is uploaded to IPFS, pass the URL to save it on Polygon */
       const headers = {

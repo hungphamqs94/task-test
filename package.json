@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "start": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "axios": "^0.21.4",
     "chai": "^4.3.4",
     "cookie": "^0.4.1",
+    "cross-env": "^7.0.3",
     "ethereumjs-util": "^7.1.0",
     "graphql": "^16.6.0",
     "graphql-tools": "^8.3.12",

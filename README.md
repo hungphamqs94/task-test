@@ -1,33 +1,20 @@
-NFT marketplace where traders can buy and sell NFT tokens through the usage of ethers and track the ownership of digital assets.
+Run NFT Ticket Check
+1. Install node and npm
+   `npm install --save`
+2. Install MetaMask plugin
 
-# Problem it Solves
+3. Create new Account and add mumbai polygon network to MetaMask
 
-* **Duplicate Asset Problem**: Duplication of digital assets is not possible due to non fungibility of NFT's.
+4. Polygon mumbai faucet to earn polygon 
 
-* **No Tampering of Data**: No one can easily tamper the data as the data is stored on the blockchain. 
+5. Copy private key of Account to paste private at file hardhat.config.js
 
-* **Quick Transactions from Polygon**: Polygon provided us with *quick transaction speed* which boosted the *User Experience* of our website.
+6. Deploy Smart Contract
 
-* **Ownership Record Maintainance**: Ownership can be tracked easily as smart contract passes the ownership from the seller to buyer directly.
+`npx hardhat run scripts/deploy.js --network mumbai`
 
-* **Data Storage problem of Blockchain**: Blockchain can't be used for storing media files for media assets in an efficient manner, so we used IPFS for digital assets. 
+7. Copy two contract address: nftadress, nftmarketplaceaddress to paste at file config.js. projAddress is your address account.
 
-# Challenges Faced 
+8. run frontend 
 
-![](https://res.cloudinary.com/dnv3ztqf1/image/upload/v1632647684/devathon/1_hu7TeBZ7lX4BTzUVLIhQJQ_u0vhgp.png)
-
-
-* **Learning New Technologies**: The entire team was unaware of the development technology behind NFT tokens. Consequently, the most difficult thing for us was to overcome the fear of learning a new technology such as blockchain. Thanks to **Polygon**, we were easily able to build NFT tokens. 
-* **Integrating errors**: The integration of next.js backend and blockchain was one the challenges we faced.
-* **CSS errors** : We invested a lot of time in developing the front end from scratch.
-* **Technical Errors**: Many **Errors** while using blockchain emerged when we tried to merge the next.js with our backend.
-* **Deploying error**:  Deploying was also one the challenges which we faced while building this project. 
-
-### **Final System Design**
-
-![](https://res.cloudinary.com/dnv3ztqf1/image/upload/v1632645360/devathon/design.jpg)
-
-
-# Technologies Used
-
-Polygon, IPFS, Next.js, Hardhat, Ethereum, Solidity, Metamask,HTML/CSS, BootStrap, JavaScript
+`npm run dev`

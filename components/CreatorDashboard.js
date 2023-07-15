@@ -32,10 +32,12 @@ const ItemList = () => {
     var listItem = await marketContract.fetchCreateNFTs();
     var data = [];
     var item = null;
-    // console.log('listItem', listItem[0].toNumber())
+    console.log('so luong item', listItem.length)
     for(var i=0;i<listItem.length; i++){
       item = await marketContract.getItemFollowId(listItem[i].toNumber());
-      console.log(ethers.utils.formatUnits(item[6].toString(),"ether"));
+      console.log('so luong ethereum:'+ethers.utils.formatUnits(item[6].toString(),"ether"));
+      console.log('item Id:'+item[0].toNumber());
+      console.log('owner:'+item[4])
       data.push({
         itemId: item[0].toNumber(), 
         nftContract: item[1], 

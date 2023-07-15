@@ -25,7 +25,7 @@ const ItemList = () => {
 
   const getItemData = async () => {
     const listItem = await axios.get("http://localhost:4000/posts");
-    console.log(listItem)
+    console.log('so luong item la:'+listItem)
   };
 
   const getItemDataFollowCategory = async (category) => {
@@ -34,9 +34,13 @@ const ItemList = () => {
   }
 
   const getItems = async (category) => {
+    console.log('cha le khong vao day sao the ')
     try {
-      const provider = new ethers.providers.JsonRpcProvider(projAddress);
-      await provider.ready;
+      // const provider = new ethers.providers.JsonRpcProvider(projAddress);
+      // await provider.ready;
+      const web3Modal = new Web3Modal(projAddress);
+      const connection = await web3Modal.connect();
+      const provider = new ethers.providers.Web3Provider(connection);
       const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
       const marketContract = new ethers.Contract(
         nftmarketaddress,
@@ -47,9 +51,10 @@ const ItemList = () => {
       let data = [];
       let item;
       if (category == "All") {
+        console.log('vay la khong vao day roi')
         getItemData();
         listItem = await marketContract.getMarketItems();
-        console.log('listItem', listItem[0].toNumber())
+        console.log('so luong listItem', listItem.length)
         for(var i=0;i<listItem.length; i++){
           item = await marketContract.getItemFollowId(listItem[i].toNumber());
           console.log('vao day:', item)
@@ -65,6 +70,7 @@ const ItemList = () => {
           })
         }
       } else {
+        console.log('no vao day sao troi:'+category)
         listItem = await marketContract.getItemsByCategory(category);
         getItemDataFollowCategory(category);
         for(var i=0;i<listItem.length; i++){
@@ -104,7 +110,7 @@ const ItemList = () => {
       });
       setItems(newItems);
     } catch (error) {
-      console.log(error);
+      console.log('loi gi the:'+error);
     }
   };
 

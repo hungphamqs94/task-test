@@ -34,8 +34,8 @@ const ItemList = () => {
       var listItem = await marketContract.fetchPurchasedNFTs();
       var data = [];
       var item = null;
-      console.log('so luong item', listItem.length)
-      console.log('nft contract:', item[1])
+      console.log('so luong item asset list', listItem.length)
+      //console.log('nft contract:', item[1])
       for(var i=0;i<listItem.length; i++){
         item = await marketContract.getItemFollowId(listItem[i].toNumber());
         console.log(ethers.utils.formatUnits(item[6].toString(),"ether"));

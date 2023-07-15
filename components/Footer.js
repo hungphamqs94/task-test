@@ -37,7 +37,7 @@ export default function Footer() {
             </h3>
             <ul className="footer-links">
               <li>
-                <a href="mailto:adiunni@hotmail.com?subject =Contact you regarding OpenStore = Message">
+                <a href="mailto:adiunni@hotmail.com?subject =Contact you regarding Ticket Check = Message">
                   <i className="fa fa-2x fa-envelope" aria-hidden="true"></i>{" "}
                  hungphamit94@gmail.com
                 </a>

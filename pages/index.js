@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Script src="https://kit.fontawesome.com/a076d05399.js" />
       <Head>
-        <title>OpenStore Marketplace</title>
+        <title>Ticket Check Marketplace</title>
         <meta name="description" content="Blockchain based NFT application" />
       </Head>
       <Display />

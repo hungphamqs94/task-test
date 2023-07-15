@@ -7,12 +7,12 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-5 footer_about_section">
             <h3>
-              <b>About OpenStore</b>
+              <b>About Us</b>
             </h3>
             <p className="text-justify about_footer">
-              OpenStore is an NFT marketplace deployed on Polygon testnet.
+              TicketKet is an NFT marketplace deployed on Polygon testnet.
             </p>
-            <a href="https://github.com/rgab1508/OpenStore">
+            <a href="https://github.com/hungphamqs94/task-test">
               <button id="commonbuttons">
                 <b>Know More</b>
               </button>
@@ -24,7 +24,7 @@ export default function Footer() {
             </h3>
             <ul className="footer-links">
               <li>
-                <a href="https://github.com/rgab1508/OpenStore">Source code</a>
+                <a href="https://github.com/hungphamqs94/task-test">Source code</a>
               </li>
               <li>
                 <Link href="/about">About Us</Link>
@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <a href="mailto:adiunni@hotmail.com?subject =Contact you regarding OpenStore = Message">
                   <i className="fa fa-2x fa-envelope" aria-hidden="true"></i>{" "}
-                  droptableteam@gmail.com
+                 hungphamit94@gmail.com
                 </a>
               </li>
             </ul>

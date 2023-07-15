@@ -28,7 +28,7 @@ export default function Display() {
                 This is deployed on a testnet and the assets currently hold no
                 real value.
               </h5>
-              <a href="https://youtu.be/sHytyvUQB0Q" target="blank">
+              <a href="" target="blank">
                 <button
                   className=" flex-row-reverse mt-3 px-5 text-center"
                   id="commonbuttons"

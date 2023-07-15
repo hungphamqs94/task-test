@@ -11,10 +11,10 @@ Run NFT Ticket Check
 
 6. Deploy Smart Contract
 
-`npx hardhat run scripts/deploy.js --network mumbai`
+    `npx hardhat run scripts/deploy.js --network mumbai`
 
 7. Copy two contract address: nftadress, nftmarketplaceaddress to paste at file config.js. projAddress is your address account.
 
 8. run frontend 
 
-`npm run dev`
+    `npm run dev`
